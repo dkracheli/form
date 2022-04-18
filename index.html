@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scc/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <video class="Dementor" loop autoplay muted>
+        <source src="images/dem.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+    </video>
+
+    <div id="wrapper">
+        <section class="box"></section>
+        <section id="titel">
+            Are you Pure-Blood?
+            <section class="pureBlood">
+                <button class="button button1">Yes</button>
+                <button class="button button2">No</button>
+            </section>
+        </section>
+        <p class="noEnter">No Entry for Mudblood and Half-Blood </p>
+        <section class="wizard-section">
+            <div class="row no-gutters">
+            </div>
+            <section class="wizard-section">
+                <div class="row no-gutters">
+                    <div class="form-wizard">
+                        <form class="formStart" action="http://se.shenkar.ac.il/teach/web1/get_form3.php" method="GET">
+
+                            <fieldset class="wizard-fieldset show">
+                                <h5>Join Death Eaters Today</h5>
+                                <div class="form-group">
+                                    <input type="text" class="form-control wizard-required" id="fullName"
+                                        name="fullName">
+                                    <label for="fullName" class="wizard-form-text-label"> Full Name*</label>
+                                    <div class="wizard-form-error fullNameError"><span>First name and Last name</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control wizard-required" id="pass" name="pass"
+                                        pattern=".{8,}" >
+                                        <span class="eye" onclick="showPass()">
+                                        <i id="hidden2" class="fa fa-eye-slash"></i>
+                                        <i id="hidden1" class="fa fa-eye"></i>
+                                    </span>
+                                    <label for="password" class="wizard-form-text-label">Password*</label>
+                                    <div class="wizard-form-error passError"><span>Password over 8 characters</span></div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="wizard-form-radio">
+                                        <input name="gender" id="radio1" type="radio" value="male">
+                                        <label for="radio1">Wizard</label>
+                                    </div>
+                                    <div class="wizard-form-radio">
+                                        <input name="gender" id="radio2" type="radio" value="female" checked>
+                                        <label for="radio2">Witch</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control wizard-required" name="age" id="age"
+                                            min="21" max="28">
+                                        <label for="age" class="wizard-form-text-label">
+                                            Age*</label>
+                                        <div class="wizard-form-error ageError"><span>I'm looking for young people between 21-28</span></div>
+                                    </div>
+                                </div>
+                                <div class="form-group clearfix">
+                                    <a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+                                </div>
+                            </fieldset>
+                            <fieldset class="wizard-fieldset">
+                                <h5>Muggle Details</h5>
+                                <div class="form-group">
+                                    <input type="email" class="form-control wizard-required" id="mail" name="mail">
+                                    <label for="mail" class="wizard-form-text-label">Muggle Email*</label>
+                                    <div class="wizard-form-error mailError"><span>Muggles' email must have @</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control wizard-required" id="phone" name="phone">
+                                    <label for="phone" class="wizard-form-text-label">Muggle Phone Number*</label>
+                                    <div class="wizard-form-error phonError"><span>No markers!!!</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control wizard-required" id="address" name="address">
+                                    <label for="address" class="wizard-form-text-label">Address for owl's shipping*</label>
+                                    <div class="wizard-form-error"></div>
+                                </div>
+                                <div class="form-group">
+                                    <img class="AnimagusIMG" src="images/question-mark.svg"><label>Animagus?</label>
+                                    <div class="wizard-form-radio AnimagusYes">
+                                        <input name="Animagus" id="AnimagusYes" type="radio">
+                                        <label for="AnimagusYes">Yes</label>
+                                    </div>
+                                    <div class="wizard-form-radio AnimagusNo">
+                                        <input name="Animagus" id="AnimagusNo" type="radio">
+                                        <label for="AnimagusNo">No</label>
+                                    </div>
+                                    <p class="AnimagusExplanation">An animagus is a persone who can transform themselves into
+                                        an animal and back again at his own will...<br><spen>YOU SHOULD KNOW THAT</spen>
+                                    </p>
+                                    <div class="form-group AnimagusWhich">
+                                        <input type="text" class="form-control" id="which">
+                                        <label for="which" class="wizard-form-text-label">To which animal?</label>
+                                        <div class="wizard-form-error"></div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group clearfix">
+
+                                    <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+                                    <a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="wizard-fieldset">
+                                <h5>Education</h5>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="form-group">
+                                                <select class="form-control" name="temper">
+                                                    <option value="10">Educational Institution</option>
+                                                    <option id="Hogwarts" value="20">Hogwarts</option>
+                                                    <option value="30">Beauxbatons</option>
+                                                    <option value="40">Durmstrang</option>
+                                                    <option value="50">Castelobruxo</option>
+                                                    <option value="60">Ilvermorny</option>
+                                                    <option value="70">Uagadou</option>
+                                                    <option value="80">Mahoutokoro</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="form-group">
+                                                <select class="form-control" name="coffee">
+                                                    <option value="0">Years of Education</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h1 id="form-title">Courses you have taken</h1><br>
+                                <div class="wizard-form-checkbox wizard-required">
+                                    <label class="checkbox-control"><input type="checkbox" name="interests[]"
+                                            value="Potions">Potions</label>
+                                    <label class="checkbox-control"><input type="checkbox" name="interests[]"
+                                            value="Defence Against the Dark Art">Defence Against the Dark Arts</label>
+                                    <label class="checkbox-control"><input type="checkbox" name="interests[]"
+                                            value="Charms">
+                                        Charms</label>
+                                    <label class="checkbox-control"><input type="checkbox" name="interests[]"
+                                            value="Transfiguration">
+                                        Transfiguration</label>
+                                    <label class="checkbox-control"><input type="checkbox" name="interests[]"
+                                            value="Divination">
+                                        Divination</label>
+                                    <label class="checkbox-control"><input type="checkbox" name="interests[]"
+                                            value=" History of Magi">
+                                        History of Magic</label>
+                                    <label class="checkbox-control"><input type="checkbox" name="interests[]"
+                                            value="Herbology">
+                                        Herbology</label>
+                                    <label class="checkbox-control"><input type="checkbox" name="interests[]"
+                                            value="Apparition">
+                                        Apparition</label>
+                                    <label class="checkbox-control"><input type="checkbox" name="interests[]"
+                                            value="Astronomy">
+                                        Astronomy</label>
+                                    <label class="checkbox-control MuggleStudies"><input type="checkbox" name="interests[]"
+                                            value="Muggle Studies">
+                                            <p class="MuggleStudiesP">lo csmcsa;lcl;sa</p>
+                                        Muggle Studies</label>
+                                    <label class="checkbox-control"> <input type="checkbox" name="interests[]"
+                                            value="Ancient Runes"> Ancient Runes</label>
+                                </div>
+                                <div class="form-group clearfix">
+                                    <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+                                    <a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+                                </div>
+                            </fieldset>
+                            <fieldset class="wizard-fieldset">
+                                <h5>Important!</h5>
+                                <div class="form-group">
+                                    <textarea name="torture" class="form-control form-open-q"></textarea>
+                                    <label for="torture" class="wizard-form-text-label">Describe how would you prefer to
+                                        torture a muggle ?</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" name=" " id="brname">
+                                    <label for="brname" class="wizard-form-text-label">Number of relatives in
+                                        Azkaban</label>
+                                </div>
+
+                                <h1 id="form-title">Favorite Unforgivable Curse</h1><br>
+                                <div id="rado">
+                                    <input id="a" type="radio" name="hopping" value="a" checked>
+                                    <label for="a"><span></span>Avada Kedavra</label>
+                                    <input id="b" type="radio" name="hopping" value="b">
+                                    <label for="b"><span></span>Cruciatus</label>
+                                    <input id="c" type="radio" name="hopping" value="c">
+                                    <label for="c"><span></span>Imperius</label>
+                                    <div class="worm">
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                        <div class="worm__segment"></div>
+                                    </div>
+                                </div>
+                                <input type="txst" id="website" name="website" value="www.deathEaters.com">
+                                <div class="form-group clearfix">
+                                    <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+                                    <input class="form-wizard-submit float-right" type="submit" value="send">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+    </div>
+
+    <section class="ag-smoke-block">
+        <div class="ag-smoke-1"><img src="images/smoke-1.svg"></div>
+        <div class="ag-smoke-1 ag-smoke__delay-1"><img src="images/smoke-1.svg"></div>
+        <div class="ag-smoke-1 ag-smoke__delay-2"><img src="images/smoke-1.svg"></div>
+        <div class="ag-smoke-2"><img src="images/smoke-2.svg"></div>
+        <div class="ag-smoke-2 ag-smoke__delay-1"><img src="images/smoke-2.svg"></div>
+        <div class="ag-smoke-2 ag-smoke__delay-2"><img src="images/smoke-2.svg"></div>
+        <div class="ag-smoke-3"><img src="images/smoke-3.svg"></div>
+        <div class="ag-smoke-3 ag-smoke__delay-1"><img src="images/smoke-3.svg"></div>
+        <div class="ag-smoke-3 ag-smoke__delay-2"><img src="images/smoke-3.svg"></div>
+        <div class="ag-smoke-4"><img src="images/smoke-4.svg"></div>
+        <div class="ag-smoke-4 ag-smoke__delay-1"><img src="images/smoke-4.svg"></div>
+        <div class="ag-smoke-4 ag-smoke__delay-2"><img src="images/smoke-4.svg"></div>
+        <div class="ag-format-container">
+        </div>
+    </section>
+    <!-- partial -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</body>
+
+</html>
